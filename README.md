@@ -1,41 +1,67 @@
-# Project Title
+# Degen Game with Merchandise Store
 
-Simple overview of use/purpose.
+This is a simple DeFi game project which is deployed to Avalanche Fuji test network.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+**Minting:**
+   - The owner can mint new tokens and assign them to a specified address.
+
+**Burning:**
+
+  - Token holders can burn a specific amount of their tokens.
+
+**Redeeming Merchandise:**
+
+  - Token holders can redeem merchandise based on their token balance. If the balance is below 500 tokens, the tokens will be burned.
+
+**Gifting:**
+
+  - Token holders can gift a specified amount of tokens to another address, provided they have a balance of at least 3000 tokens.
+
+**The want_to_gift** variable acts as a rulebook to run the gift function.
+
+**The game_merchandise** variable acts as a merchandise store guide to list out items for the user to redeem.
 
 ## Getting Started
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+You can clone the repository and change the directory to run it in terminal locally.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+
+* Firstly you need to install the packages:
 ```
-code blocks for commands
+npm i
+```
+
+* Then, you need to install openzeppelin libraries:
+```
+npm install @openzeppelin/contracts
+```
+
+* You can the contract to fuji testnet by running:
+```
+npx hardhat run scripts/deploy.js --network fuji
+```
+
+* In order to verify the contract, you can run:
+```
+npx hardhat verify (contractaddr) --network fuji
 ```
 
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+Developers should reach out to https://twitter.com/AvaxDevelopers to get a coupon code to get test funds to start testing on fuji.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Vismitha P
+@vismithaaap@gmail.com
 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
