@@ -25,7 +25,7 @@ contract DegenToken is ERC20, Ownable, ERC20Burnable {
 
     function redeem(uint256 number) public  {
         assert(number > 0 && number < 5);
-        if (balanceOf(msg.sender) <= 500) {
+        if (balanceOf(msg.sender) >= 500) {
             _burn(msg.sender, number * 500);
         }
        
